@@ -6,7 +6,8 @@
 #include "Animation/AnimInstance.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "UserWidget.h"
-
+#include "CoreMinimal.h"
+#include "Modules/ModuleManager.h"
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, prototype_p, "prototype_p" );
  
@@ -60,4 +61,19 @@ IMPLEMENT_MODULE(FDefaultModuleImpl, ModuleTest)
 	MyCharacterCustomization->SetAnimInstance(nullptr);
 	UE_LOG(LogTemp, Warning, TEXT("SkeletalMesh: %s"), *MyCharacterCustomization->SkeletalMesh->GetName());
 	UE_LOG(LogTemp, Warning, TEXT("AnimInstance: %s"), *MyCharacterCustomization->AnimInstance->GetName());
+}
+
+
+// function to get templates for character customization
+void UMyCharacterCustomization::GetCharacterCustomizationTemplates()
+{
+	// Get the skeletal mesh
+	USkeletalMesh* SkeletalMesh = nullptr;
+	// Get the animation instance
+	UAnimInstance* AnimInstance = nullptr;
+
+	// Set the skeletal mesh
+	SetSkeletalMesh(SkeletalMesh);
+	// Set the animation instance
+	SetAnimInstance(AnimInstance);
 }
