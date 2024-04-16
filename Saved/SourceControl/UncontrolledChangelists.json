@@ -5,7 +5,10 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/pevah/OneDrive/Documents/Unreal Projects/prototype_p/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"C:/Users/pevah/OneDrive/Documents/Unreal Projects/prototype_p/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/Users/pevah/OneDrive/Documents/Unreal Projects/prototype_p/Content/Tree.uasset",
+				"C:/Users/pevah/OneDrive/Documents/Unreal Projects/prototype_p/Content/Tree_2k.uasset",
+				"C:/Users/pevah/OneDrive/Documents/Unreal Projects/prototype_p/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/D/2Q/FEMG4OCF54DKTFZK2O04SE.uasset"
 			]
 		}
 	]

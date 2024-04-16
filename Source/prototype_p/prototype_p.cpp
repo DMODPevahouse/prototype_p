@@ -50,3 +50,14 @@ void UMyCharacterCustomization::SetAnimInstance(UAnimInstance* InAnimInstance)
 }
 
 IMPLEMENT_MODULE(FDefaultModuleImpl, ModuleTest);
+
+IMPLEMENT_MODULE(FDefaultModuleImpl, ModuleTest)
+{
+	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
+	UE_LOG(LogTemp, Warning, TEXT("ModuleTest module has started!"));
+	UMyCharacterCustomization* MyCharacterCustomization = NewObject<UMyCharacterCustomization>();
+	MyCharacterCustomization->SetSkeletalMesh(nullptr);
+	MyCharacterCustomization->SetAnimInstance(nullptr);
+	UE_LOG(LogTemp, Warning, TEXT("SkeletalMesh: %s"), *MyCharacterCustomization->SkeletalMesh->GetName());
+	UE_LOG(LogTemp, Warning, TEXT("AnimInstance: %s"), *MyCharacterCustomization->AnimInstance->GetName());
+}
