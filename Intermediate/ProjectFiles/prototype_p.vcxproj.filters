@@ -78,4 +78,9 @@
       <Filter>Source\prototype_p</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="character_customization.cpp">
+      <Filter>Source\prototype_p</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
