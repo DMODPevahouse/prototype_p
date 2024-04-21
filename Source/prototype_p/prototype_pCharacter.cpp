@@ -116,3 +116,30 @@ bool Aprototype_pCharacter::GetHasRifle()
 {
 	return bHasRifle;
 }
+
+// Create a new character class based on the Character class
+class MyCharacter : public UObject
+{
+	GENERATED_BODY()
+
+public:
+	MyCharacter();
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	class USkeletalMeshComponent* SkeletalMesh;
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	class UCameraComponent* Camera;
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	class USpringArmComponent* SpringArm;
+
+	UPROPERTY(EditAnywhere, Category = "Components")
+	class UCharacterMovementComponent* CharacterMovement;
+
+	UPROPERTY(EditAnywhere, Category = "Animations")
+	class UAnimInstance* AnimInstance;
+
+	UFUNCTION(BlueprintCallable, Category = "Animations")
+	void PlayAnimation(class UAnimSequence* AnimSequence);
+};
