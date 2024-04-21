@@ -11,4 +11,8 @@
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, prototype_p, "prototype_p" );
  
+// adding title screen module
+class FTitleScreenModule : public IModuleInterface
+{
 
+};
