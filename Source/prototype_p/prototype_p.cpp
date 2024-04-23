@@ -16,3 +16,6 @@ class FTitleScreenModule : public IModuleInterface
 {
 
 };
+
+IMPLEMENT_MODULE(FTitleScreenModule, TitleScreenModule);
+
