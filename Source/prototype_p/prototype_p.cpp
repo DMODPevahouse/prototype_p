@@ -19,3 +19,21 @@ class FTitleScreenModule : public IModuleInterface
 
 IMPLEMENT_MODULE(FTitleScreenModule, TitleScreenModule);
 
+// adding content to the title screen module
+class FTitleScreenModule : public IModuleInterface
+{
+	// Called when the module is loaded
+	virtual void StartupModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Title Screen Module has started!"));
+	}
+
+	// Called when the module is unloaded
+	virtual void ShutdownModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Title Screen Module has shut down!"));
+	}
+
+	// Adding a widget to the title screen
+	UUserWidget* TitleScreenWidget = CreateWidget<UUserWidget>(GetWorld(), TitleScreenWidgetClass);
+};
