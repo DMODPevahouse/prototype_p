@@ -37,3 +37,22 @@ class FTitleScreenModule : public IModuleInterface
 	// Adding a widget to the title screen
 	UUserWidget* TitleScreenWidget = CreateWidget<UUserWidget>(GetWorld(), TitleScreenWidgetClass);
 };
+
+// creating a character creation ui module
+class FCharacterCreationUIModule : public IModuleInterface
+{
+	// Called when the module is loaded
+	virtual void StartupModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Creation UI Module has started!"));
+	}
+
+	// Called when the module is unloaded
+	virtual void ShutdownModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Creation UI Module has shut down!"));
+	}
+
+	// Adding a widget to the character creation ui
+	UUserWidget* CharacterCreationWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterCreationWidgetClass);
+};
