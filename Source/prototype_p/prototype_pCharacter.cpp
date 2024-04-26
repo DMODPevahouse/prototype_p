@@ -143,3 +143,31 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Animations")
 	void PlayAnimation(class UAnimSequence* AnimSequence);
 };
+
+// Create a new character class based on the Character class
+class MyCharacter
+{
+	GENERATED_BODY()
+
+	public:
+		MyCharacter
+		{
+			// Create a skeletal mesh component
+			SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
+			SkeletalMesh->SetupAttachment(RootComponent);
+
+			// Create a camera component
+			Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+			Camera->SetupAttachment(RootComponent);
+
+			// Create a spring arm component
+			SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+			SpringArm->SetupAttachment(RootComponent);
+
+			// Create a character movement component
+			CharacterMovement = CreateDefaultSubobject<UCharacterMovementComponent>(TEXT("CharacterMovement"));
+
+			// Create an animation instance
+			AnimInstance = CreateDefaultSubobject<UAnimInstance>(TEXT("AnimInstance"));
+		}
+};
