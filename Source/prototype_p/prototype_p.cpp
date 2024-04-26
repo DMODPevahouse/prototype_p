@@ -56,3 +56,22 @@ class FCharacterCreationUIModule : public IModuleInterface
 	// Adding a widget to the character creation ui
 	UUserWidget* CharacterCreationWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterCreationWidgetClass);
 };
+
+// creating a character creation module
+class FCharacterCreationModule : public IModuleInterface
+{
+	// Called when the module is loaded
+	virtual void StartupModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Creation Module has started!"));
+	}
+
+	// Called when the module is unloaded
+	virtual void ShutdownModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Creation Module has shut down!"));
+	}
+
+	// Adding a widget to the character creation
+	UUserWidget* CharacterCreationWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterCreationWidgetClass);
+};
