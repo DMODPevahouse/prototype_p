@@ -10,6 +10,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/InputSettings.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -178,3 +180,4 @@ void MyCharacter::PlayAnimation(class UAnimSequence* AnimSequence)
 	// Play the animation
 	AnimInstance->PlaySlotAnimationAsDynamicMontage(AnimSequence, TEXT("DefaultSlot"), 0.0f, 0.0f, 1.0f, 1);
 }
+
