@@ -171,3 +171,10 @@ class MyCharacter
 			AnimInstance = CreateDefaultSubobject<UAnimInstance>(TEXT("AnimInstance"));
 		}
 };
+
+// Play an animation
+void MyCharacter::PlayAnimation(class UAnimSequence* AnimSequence)
+{
+	// Play the animation
+	AnimInstance->PlaySlotAnimationAsDynamicMontage(AnimSequence, TEXT("DefaultSlot"), 0.0f, 0.0f, 1.0f, 1);
+}
