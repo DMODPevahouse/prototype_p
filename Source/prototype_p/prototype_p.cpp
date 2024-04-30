@@ -75,3 +75,22 @@ class FCharacterCreationModule : public IModuleInterface
 	// Adding a widget to the character creation
 	UUserWidget* CharacterCreationWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterCreationWidgetClass);
 };
+
+// add a character physics module
+class FCharacterPhysicsModule : public IModuleInterface
+{
+	// Called when the module is loaded
+	virtual void StartupModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Physics Module has started!"));
+	}
+
+	// Called when the module is unloaded
+	virtual void ShutdownModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Physics Module has shut down!"));
+	}
+
+	// Adding a widget to the character physics
+	UUserWidget* CharacterPhysicsWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterPhysicsWidgetClass);
+};
