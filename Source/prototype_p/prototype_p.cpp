@@ -94,3 +94,22 @@ class FCharacterPhysicsModule : public IModuleInterface
 	// Adding a widget to the character physics
 	UUserWidget* CharacterPhysicsWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterPhysicsWidgetClass);
 };
+
+// add an example enemy ai module
+class FExampleEnemyAIModule : public IModuleInterface
+{
+	// Called when the module is loaded
+	virtual void StartupModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Example Enemy AI Module has started!"));
+	}
+
+	// Called when the module is unloaded
+	virtual void ShutdownModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Example Enemy AI Module has shut down!"));
+	}
+
+	// Adding a widget to the example enemy ai
+	UUserWidget* ExampleEnemyAIWidget = CreateWidget<UUserWidget>(GetWorld(), ExampleEnemyAIWidgetClass);
+};
