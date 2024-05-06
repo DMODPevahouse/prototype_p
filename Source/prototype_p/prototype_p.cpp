@@ -113,3 +113,22 @@ class FExampleEnemyAIModule : public IModuleInterface
 	// Adding a widget to the example enemy ai
 	UUserWidget* ExampleEnemyAIWidget = CreateWidget<UUserWidget>(GetWorld(), ExampleEnemyAIWidgetClass);
 };
+
+// add a character movement module
+class FCharacterMovementModule : public IModuleInterface
+{
+	// Called when the module is loaded
+	virtual void StartupModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Movement Module has started!"));
+	}
+
+	// Called when the module is unloaded
+	virtual void ShutdownModule() override
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Movement Module has shut down!"));
+	}
+
+	// Adding a widget to the character movement
+	UUserWidget* CharacterMovementWidget = CreateWidget<UUserWidget>(GetWorld(), CharacterMovementWidgetClass);
+};
