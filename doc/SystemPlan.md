@@ -4,6 +4,8 @@ Beggining of a System plan for a future game development project.
 
 ## 1. Game Concept
 
+### 1.1. Third person action-shooter game
+
 ## 2. Game Mechanics
 
 ## 3. Game Story
