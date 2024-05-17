@@ -14,4 +14,6 @@ Beggining of a System plan for a future game development project.
 
 ## 3. Game Story
 
+### 3.1. Dungeons and dragons theme
+
 ## 4. Game Characters
